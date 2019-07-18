@@ -110,8 +110,23 @@ if __name__ == '__main__':
             
             #print([(POSE_COCO_BODY_PARTS[0], v.y)  for k,v in human.body_parts.items()])
 
-            while POSE_COCO_BODY_PARTS[0] > POSE_COCO_BODY_PARTS[1]:
-                print("YES")
+            b = (4, 7)
+            c = (2, 5)
+            wrists = [(POSE_COCO_BODY_PARTS[b], v.x, v.y) for b,v in human.body_parts.items()]
+            shoulders = [(POSE_COCO_BODY_PARTS[c], v.x, v.y) for c,v in human.body_parts.items()]
+            
+            print(POSE_COCO_BODY_PARTS[b])
+
+           # while wrists > shoulders
+           #     return hail_taxi(img)
+            
+
+            #while h(POSE_COCO_BODY_PARTS[4]) > h(POSE_COCO_BODY_PARTS[2]):
+             #   print("yes")
+
+            #for x in POSE_COCO_BODY_PARTS
+
+                
     
             # Debugging statement: remove before demonstration.
             # print([(POSE_COCO_BODY_PARTS[k], v.x, v.y) for k,v in human.body_parts.items()])
