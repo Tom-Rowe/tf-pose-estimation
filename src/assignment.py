@@ -107,8 +107,12 @@ if __name__ == '__main__':
             # TODO ensure it only does this when someone is hailing a taxi.
             # That is, an arm is above their head.
             #print([(POSE_COCO_BODY_PARTS[k], v.x, v.y) for k,v in human.body_parts.items()])
+            
+            #print([(POSE_COCO_BODY_PARTS[0], v.y)  for k,v in human.body_parts.items()])
 
-            print([(POSE_COCO_BODY_PARTS[k], v.y)  for k,v in human.body_parts.items()])
+            while POSE_COCO_BODY_PARTS[0] > POSE_COCO_BODY_PARTS[1]:
+                print("YES")
+    
             # Debugging statement: remove before demonstration.
             # print([(POSE_COCO_BODY_PARTS[k], v.x, v.y) for k,v in human.body_parts.items()])
 
