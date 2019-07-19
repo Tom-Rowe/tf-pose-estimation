@@ -107,30 +107,24 @@ if __name__ == '__main__':
 
             # TODO ensure it only does this when someone is hailing a taxi.
             # That is, an arm is above their head.
-            #print([(POSE_COCO_BODY_PARTS[k], v.x, v.y) for k,v in human.body_parts.items()])
 
             Neck = 1
             LWrist = 1
             RWrist = 1
 
             for k,v in human.body_parts.items():
-
                 if POSE_COCO_BODY_PARTS[k] == "Neck":
                     Neck = v.y
-
                 elif POSE_COCO_BODY_PARTS[k] == "RWrist":
                     RWrist = v.y
-
                 elif POSE_COCO_BODY_PARTS[k] == "LWrist":
                     LWrist = v.y
-
-
             if LWrist < Neck or RWrist < Neck:
                 hail_taxi(image)
 
 
 
-
+            #IGNORE THE BELOW
             #b = (4, 7)
             #c = (2, 5)
             #wrists = human.body_parts[b].y
