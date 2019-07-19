@@ -1,9 +1,9 @@
     {
   "username_me": Tom-Rowe,
-  "username_partner": "THEIRNAME",
+  "username_partner": ChelseaChaderopa,
   "commit_me": "https://github.com/<YOUR-GITHUB>/tf-pose-estimation/commit/<thecommitSHA>",
   "commit_partner": "https://github.com/<YOUR-GITHUB>/tf-pose-estimation/commit/<thecommitSHA>",
   "commit_coauthor": "https://github.com/<YOUR-GITHUB>/tf-pose-estimation/commit/<thecommitSHA>",
-  "screenshot_me": "/path/to/your/screenshot.jpg",
+  "screenshot_me": C:/Users/Tom Rowe/1161/tf-pose-estimation/Tom_Screenshot,
   "screenshot_partner": "/path/to/partner/screenshot.jpg"
 }
