@@ -124,7 +124,7 @@ if __name__ == '__main__':
                 elif POSE_COCO_BODY_PARTS[k] == "LWrist":
                     LWrist = v.y
 
-#To detect if someone is hailing a taxi, distance from top of the screen to either left or right wrist must be less than distance from top of the screen to ne
+#to detect if someone is hailing a taxi, distance from top of the screen to either left or right wrist must be less than distance from top of the screen to ne
 
             if LWrist < Neck or RWrist < Neck:
                 hail_taxi(image)
