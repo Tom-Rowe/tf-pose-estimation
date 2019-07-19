@@ -102,32 +102,44 @@ if __name__ == '__main__':
         image = canvas
         # feed image into the neural network
         humans = e.inference(image)  # list of humans
+
         for id, human in enumerate(humans):
 
             # TODO ensure it only does this when someone is hailing a taxi.
             # That is, an arm is above their head.
             #print([(POSE_COCO_BODY_PARTS[k], v.x, v.y) for k,v in human.body_parts.items()])
+
+            Neck = 1
+            LWrist = 1
+            RWrist = 1
+
+            for k,v in human.body_parts.items():
+
+                if POSE_COCO_BODY_PARTS[k] == "Neck":
+                    Neck = v.y
+
+                elif POSE_COCO_BODY_PARTS[k] == "RWrist":
+                    RWrist = v.y
+
+                elif POSE_COCO_BODY_PARTS[k] == "LWrist":
+                    LWrist = v.y
+
+
+            if LWrist < Neck or RWrist < Neck:
+                hail_taxi(image)
+
+
+
+
+            #b = (4, 7)
+            #c = (2, 5)
+            #wrists = human.body_parts[b].y
+            #shoulders = human.body_parts[c].y
             
-            #print([(POSE_COCO_BODY_PARTS[0], v.y)  for k,v in human.body_parts.items()])
-
-            b = (4, 7)
-            c = (2, 5)
-            wrists = [(POSE_COCO_BODY_PARTS[b], v.x, v.y) for b,v in human.body_parts.items()]
-            shoulders = [(POSE_COCO_BODY_PARTS[c], v.x, v.y) for c,v in human.body_parts.items()]
-            
-            print(POSE_COCO_BODY_PARTS[b])
-
-           # while wrists > shoulders
-           #     return hail_taxi(img)
+            #while wrists > shoulders:
+            #    print("hello")
             
 
-            #while h(POSE_COCO_BODY_PARTS[4]) > h(POSE_COCO_BODY_PARTS[2]):
-             #   print("yes")
-
-            #for x in POSE_COCO_BODY_PARTS
-
-                
-    
             # Debugging statement: remove before demonstration.
             # print([(POSE_COCO_BODY_PARTS[k], v.x, v.y) for k,v in human.body_parts.items()])
 
